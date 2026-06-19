@@ -1,0 +1,19 @@
+h3{
+    color:blue;
+}
+h1{
+    color:crimson;
+}
+p{
+    color:black;
+}
+p{
+    background-color: darksalmon;
+}
+p:nth-child(1),
+p:nth-child9(3) {
+    color:red;
+    background-color: darkgrey;
+}
+
+

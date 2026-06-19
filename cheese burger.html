@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie |Cheese Burger</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 700px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            background: white;
+            color: #111;
+        }
+        .foodie {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #2e7d32;
+        }
+        .nav {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .nav a {
+              text-decoration: none;
+              color: #333;
+        }
+        hr {
+            margin: 1,2rem 0;
+            border: none;
+            border-top: 1px solid #cc;
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0 1.5rem;
+        }
+        .hero-content {
+            flex: 1;
+            min-width: 250px;
+        }
+        .hero-image {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 32px;
+            object-fit: cover;
+            transition: transform 0.2s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0.10);
+        }
+        .hero-image img:hover {
+            transform: scale(1.02);
+        }
+        .special-dish {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #2e7d32 !important;
+            margin: 1.5rem 0 0.25rem;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0 0 0.75rem 0;
+            color: yellow;
+        }
+        .description {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+        .btn-order {
+            display: inline-block;
+            background-color: yellow;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+        .order-bold {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+        @media (max width: 700px) {
+            .hero {
+                -ms-flex-direction: column;
+                text-align: center;
+            }
+            .hero-image img {
+                max-width: 280px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="foodie">Foodie.</div>
+    <div class="nav">
+      <a href="#">Home</a> |
+      <a href="#">Dishes</a> |
+      <a href="#">About</a> |
+      <a href="#">Menu</a> |
+      <a href="#">Testimonials</a> |
+      <a href="#">Order</a> |
+    </div>
+    <hr>
+    <div class="special dish" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: lawngreen; !important; margin: 1.5rem 0 0.25rem 0;">Our Special Dish</div>
+    <h1>Cheese Burger</h1>
+    <div class="description">
+    Lorem ipsum dolor sit amet consectetur adipisicing<br>
+    Elit. Sit Natus Dolor Cumque?
+    </div>
+    <a href="#" class="btn-order">Order Now</a
+        <div class="hero-image">
+        <img src="https://stordfkenticomedia.blob.core.windows.net/df-us/rms/media/recipemediafiles/recipe%20images%20and%20files/retail/desktop%20(600x600)/2023.nov/2023_retail_double-stack-cheeseburger_600x600.jpg?ext=.jpg">
+        </div>
+        <hr>
+</body>
+</html>
