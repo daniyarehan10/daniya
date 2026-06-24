@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM burger</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.goggleapis.com/css2?family=Fredoka:wght@500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'poppins, sans-serif';
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+        .logo h1 {
+            font-family: 'fredoko', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            transform: rotate(-5deg);
+        }
+        nav {
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: color o0.3s;
+        }
+        nav ul li a:hover {
+            color: #e63946;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+            gap: 40px;
+            padding: 60px 0;
+        }
+        .hero-content {
+            flex: 1;
+            max-width: 500px;
+        }
+        .hero-content h2 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        .hero-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 35px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: red;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: backgroud 0.3s;
+        }
+        .btn:hover {
+            background-color: #b82e3a;
+        }
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            width: 550px;
+        }
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 0;
+            }
+            .hero-content {
+                max-width: 100%;
+            }
+            .hero-content h2 {
+                font-size: 36px;
+            }
+            nav ul {
+                gap: 20px;
+            }
+            .hero-image img {
+                width: 100%;
+            }
+        }
+        @media (max-width: 600px) {
+            nav ul li a {
+                font-size: 12px;
+            }
+            .hero-content h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 64 64" fll="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d=M32 10C32 10 20 14 20 22C20 30 32 34 32 34c32 34 44 30 44 22C44 14 32 10 32 10Z stroke="#e63946" stroke-width="2"/>
+                    <path d="M18 36H46V42C46 44 44 46 42 46H22C20 46 18 44 18 42V36Z " STROKE="#e63946" stroke-width="2"/>
+                    <path d="M20 28H44" stroke="#e63946" stroke-width="2"/>
+                    <path d="M32 18l32 24" stroke="#e63946" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M28 22L36 22" stroke="#e63946" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h1>HM Burger</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href=#>HOME</a></li>
+                <li><a href=#>ABOUT</a></li>
+                <li><a href=>MENU</a></li>
+                <li><a href=>GALLERY</a></li>
+                <li><a href=>REVIEWS</a></li>
+                <li><a href=>CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container" style="display: flex; align-items: center; gap: 40px; width: 100%;">
+            <div class="hero-content">
+                <h2>best burger in town</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, doloremque? Numquam voluptates ipsa nemo esse officia, pariatur natus reprehenderit repellendus deleniti quis maiores, quisquam repellat rem vero sed! Error, maxime.</p>
+                <a href="#" class="btn">check out menu</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=612x612&w=0&k=20&c=lfsA0dHDMQdam2M1yvva0_RXfjAyp4gyLtx4YUJmXgg=">
+            </div>
+        </div>
+    </section>
+</body
+</html>
