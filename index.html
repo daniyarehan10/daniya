@@ -1,0 +1,470 @@
+l<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKYARD - Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80') center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 40px 0;
+            color: white;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            width: 100%;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .hero-text .logo {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 14px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2DC7FF;
+            color: white;
+            border: 2px solid #2DC7FF;
+        }
+
+        .btn-primary:hover {
+            background: #00b3e6;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #333;
+        }
+
+        /* Form */
+        .form-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .form-box h3 {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #eee;
+        }
+
+        .form-box input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .form-box button {
+            width: 100%;
+            padding: 12px;
+            background: #2DC7FF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        .form-box button:hover {
+            background: #00b3e6;
+        }
+
+        .form-box small {
+            font-size: 10px;
+            color: #ddd;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #2DC7FF;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            padding: 80px 0;
+        }
+
+        .feature-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .feature-img {
+            flex: 1;
+        }
+
+        .feature-img img {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text h2 {
+            font-size: 26px;
+            font-weight: 300;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .feature-text p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .btn-blue-outline {
+            color: #2DC7FF;
+            border: 2px solid #2DC7FF;
+            background: transparent;
+        }
+
+        .btn-blue-outline:hover {
+            background: #2DC7FF;
+            color: white;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 26px;
+            font-weight: 300;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .services-section > p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 60px;
+        }
+
+        .services-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            text-align: left;
+        }
+
+        .services-img {
+            flex: 0 0 40%;
+        }
+
+        .services-img img {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .services-grid {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .service-box {
+            flex: 1 1 calc(50% - 20px);
+            display: flex;
+            gap: 15px;
+        }
+
+        .service-icon {
+            color: #2DC7FF;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .service-info h4 {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .service-info p {
+            font-size: 13px;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 992px) {
+            .hero-content, .feature-content, .services-wrapper {
+                flex-direction: column;
+            }
+            .hero-text {
+                text-align: center;
+                max-width: 100%;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .feature-text {
+                text-align: center;
+            }
+            .services-img {
+                flex: 1;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            .feature-section, .services-section {
+                padding: 50px 0;
+            }
+            .service-box {
+                flex: 1 1 100%;
+            }
+            .hero {
+                min-height: auto;
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 26px;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            .hero-btns {
+                flex-direction: column;
+            }
+            .form-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="logo">BACKYARD</div>
+                    <h1>Beautiful High Converting Landing Page</h1>
+                    <p>Backyard is a modern and customizable landing page template designed to increase conversion of your product. Backyard is flexible to suit any kind of your business. Try now and join with our happy customers!</p>
+                    <div class="hero-btns">
+                        <a href="#" class="btn btn-primary">Features</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <h3>GET STARTED</h3>
+                    <input type="text" placeholder="Your name">
+                    <input type="email" placeholder="Email address">
+                    <button>SUBSCRIBE</button>
+                    <small>We will not share your email. Read our privacy policy.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">BACKYARD</div>
+                <ul class="nav-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Feature Section -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-content">
+                <div class="feature-img">
+                    <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="iMac and iPad">
+                </div>
+                <div class="feature-text">
+                    <h2>Optimize performance through advanced targeting solutions</h2>
+                    <p>Good marketing makes the company look smart. Great marketing makes the customer feel smart. - Joe Chernov. Never doubt a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has. - Margaret Mead. The best way to predict the future is to create it. - Peter Drucker.</p>
+                    <a href="#" class="btn btn-blue-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Recreate your ideas and gain more success</h2>
+            <p>Increase your user loyalty by maintaining mutual communication and nurturing your online community.</p>
+            
+            <div class="services-wrapper">
+                <div class="services-img">
+                    <img src="https://media.istockphoto.com/id/1129678414/photo/rear-view-of-a-young-woman-at-sunset.jpg?s=612x612&w=0&k=20&c=u0yDNs7U_svS8Y69fEkVoA9nyHQpA3a7GElcsSRwKqo=">
+                </div>
+                <div class="services-grid">
+                    <div class="service-box">
+                        <div class="service-icon"><i class="fa-regular fa-file-lines"></i></div>
+                        <div class="service-info">
+                            <h4>Marketing Strategy</h4>
+                            <p>Good marketing makes the company look smart. Great marketing makes the customer feel smart.</p>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                        <div class="service-info">
+                            <h4>App Monetization</h4>
+                            <p>Content builds relationships. Relationships are built on trust. Trust drives revenue. - Andrew Davis</p>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <div class="service-info">
+                            <h4>Store Optimization</h4>
+                            <p>Never doubt a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has.</p>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="service-info">
+                            <h4>User Management</h4>
+                            <p>Instead of using technology to automate processes, think about using technology to enhance human interaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
